@@ -29,6 +29,14 @@ One way to “QC” a gene module as well as visualizing its correlating pattern
 This might sound like a lot, especially when you have hundreds if not thousands of genes. One can do the following: select genes that have high module-memberships to the module, 
 scale them to be between 0-1, and plot only those genes’ expressions (log10 CPM) against the values of the response variable; simultaneously, plotting the mean trend of the module as well,
 e.g. eigengene. For example, in our study, we detect an interesting module that is tightly correlated with immune-infiltration:
+ 
+tp=plot_trend( multiExpr=step1[[2]],group_gene = cor_result$group_gene,cluster="c5",module="yellow",
+                         mergedColors=cor_result$mergedColors,meta=step1[[3]],response_var = "log_immune_infiltration_percent",
+                               condition_label="Condition",sample_label="Channel",
+                               xlabel="log10 of % of immune cells found in tissue",
+                               ylabel="scaled log10 CPM",fit_curve="gam"
+, w = 15, h = 15,loading_thres=.2)
+                      
 
+<img src="example/plots/e5_example.png" alt="a plot showing the trend of all genes vs a response variable" style="height: 600px; width:600px;"/>
 
-<img src="example/plots/e5_example.png" alt="a plot showing the trend of all genes vs a response variable" style="height: 1000px; width:1000px;"/>
