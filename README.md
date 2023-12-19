@@ -52,5 +52,5 @@ We can also generate a plot for each gene individually:
                                                    loading_thres=.2,fit_curve="lm")
 ```
 
-<img src="example/plots/wgcna_scatterplot" alt="a plot showing the trend of all genes vs a response variable" style="height: 600px; width:600px;">
+<img src="example/plots/wgcna_scatterplot.png" alt="a plot showing the trend of all genes vs a response variable" style="height: 600px; width:600px;">
 
