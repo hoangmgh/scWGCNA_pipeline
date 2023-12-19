@@ -40,5 +40,5 @@ tp=plot_trend( multiExpr=step1[[2]],group_gene = cor_result$group_gene,cluster="
 , w = 15, h = 15,loading_thres=.2)
  ```                  
 
-<img src="example/plots/e5_example.png" alt="a plot showing the trend of all genes vs a response variable" style="height: 600px; width:600px;"/ align="center"> 
+<img src="example/plots/e5_example.png" alt="a plot showing the trend of all genes vs a response variable" style="height: 600px; width:600px;"/ > 
 
