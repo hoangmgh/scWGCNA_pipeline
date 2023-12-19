@@ -31,4 +31,4 @@ scale them to be between 0-1, and plot only those genes’ expressions (log10 CP
 e.g. eigengene. For example, in our study, we detect an interesting module that is tightly correlated with immune-infiltration:
 
 
-<img src="example/plots/e5_example.png" alt="a plot showing the trend of all genes vs a response variable" style="height: 100px; width:100px;"/>
+<img src="example/plots/e5_example.png" alt="a plot showing the trend of all genes vs a response variable" style="height: 1000px; width:1000px;"/>
