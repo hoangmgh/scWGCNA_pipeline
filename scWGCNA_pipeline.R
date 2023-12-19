@@ -196,6 +196,18 @@ construct_network=function(multiExpr,which_cluster="all",nThreads=30,power_list,
                            mergeCutHeight = .15,numericLabels = TRUE, pamRespectsDendro = TRUE, saveTOMs = FALSE,
                       verbose = 3,maxBlockSize=30000,deepSplit=4,  checkMissingData = TRUE,
                       corFnc=WGCNA::cor,save_output=NA) {
+'''
+    input:
+        multiExpr:the list of normalized matrices from step1 (preprocess_input)
+        which_cluster: the list of cluster to use, default to all ("all")
+        nThreads: number of threads to run WGCNA
+        power_list: the list of power detected from step2 (find_powers()), must match the number of clusters to process
+        for other parameters, consult WGCNA manual 
+        save_output: save the network object as a RDS object, or skip with NA
+    output:
+        the standard WGCNA output for each module saved in a named list (names(net)=which_cluster)
+        
+'''
 if (length(which_cluster)==1 &which_cluster=="all") cluster_to_use= names(multiExpr)
 else cluster_to_use=which_cluster
     
