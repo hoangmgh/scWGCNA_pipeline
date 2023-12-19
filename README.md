@@ -40,5 +40,17 @@ tp=plot_trend( multiExpr=step1[[2]],group_gene = cor_result$group_gene,cluster="
 , w = 15, h = 15,loading_thres=.2)
  ```                  
 
-<img src="example/plots/e5_example.png" alt="a plot showing the trend of all genes vs a response variable" style="height: 600px; width:600px;"> 
+<img src="example/plots/e5_example.png" alt="a plot showing the trend of all genes vs a response variable" style="height: 600px; width:600px;">
+
+We can also generate a plot for each gene individually: 
+```R
+ plot_each_gene(step1[[2]],cluster="c5",module  = "yellow",
+                   mergedColors=cor_result$mergedColors,group_gene = cor_result$group_gene,meta = step1[[3]],
+                       response_var = "log_immune_infiltration_percent",
+          condition_var="Condition",sample_var="Channel",
+            xlabel="log10 % of immune cells found in tissue",ylabel="scaled log10 CPM",
+                                                   loading_thres=.2,fit_curve="lm")
+```
+
+<img src="example/plots/wgcna_scatterplot" alt="a plot showing the trend of all genes vs a response variable" style="height: 600px; width:600px;">
 
